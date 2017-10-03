@@ -1,6 +1,13 @@
+//新赠
+documentWidth = window.screen.availWidth; //屏幕宽度
+gridContainerWidth = 0.92 * documentWidth; //期盘宽度
+cellSideLength = 0.18 * documentWidth; //格子的大小
+cellSpace = 0.04 * documentWidth; //格子之间的间隔
+
+
 //获取每个单元格的坐标
 function getPosition(index) {
-    return 20 + index * 120 ;
+    return cellSpace + index * (cellSpace + cellSideLength);
 }
 
 // 设置不同数字的不同背景颜色
@@ -51,17 +58,18 @@ function getNumberBackgroundColor(number) {
 
 // 设置数字的颜色：2和4的颜色都为#776e65，其它数字的颜色为白色
 function getNumberColor(number) {
-    if (number <= 4)
+    if (number <= 4){
         return "#776e65";
-
+    }
     return "white";
 }
 
 //设置数字字体大小:2和4为60px,其他为40px
 function getNumberFontSize(number) {
-    if (number <= 512)
-        return '60px';
-    return "40px";
+    if (number <= 512){
+        return 0.6 * cellSideLength;
+    }
+    return 0.4 * cellSideLength;
 }
 
 // 判断棋盘是否还有空格子
@@ -139,27 +147,36 @@ function canMoveDown(board) {
 // 判断水平方向的两个目标格子之间有没有其他数字
 function noBlockHorizontal(row, col1, col2, board) {
     for (var i = col1 + 1; i < col2; i++)
-        if (board[row][i] != 0)
+        if (board[row][i] != 0){
             return false; // 如果在这两者之间的其它格子有数字，返回false
+        }
     return true; // 如果两者之间没数字，返回true
 }
 
 // 判断垂直方向的两个目标格子之间没有其他数字
 function noBlockVertical(col, row1, row2, board) {
     for (var i = row1 + 1; i < row2; i++)
-        if (board[i][col] != 0)
+        if (board[i][col] != 0){
             return false; // 如果在这两者之间的其它格子有数字，返回false
+        }
     return true; // 如果两者之间没数字，返回true
 }
 
 //判断4个方向是否还能移动
 function noMove(board) {
-    if (canMoveLeft(board) || canMoveRight(board) || canMoveUp(board) || canMoveDown(board))
+    if (canMoveLeft(board) || canMoveRight(board) || canMoveUp(board) || canMoveDown(board)){
         return false;
+    }
     return true;
 }
 
+//新增
+//游戏成功
+function gameSucess(){
+    $('.score').html('<p style="color: green;">Sucess</p>');
+}
+
 //游戏结束
-function gameOver(){
+function gameOver() {
     $('.score').html('<p style="color: red;">Game Over</p>');
 }

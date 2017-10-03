@@ -4,11 +4,16 @@
  */
 function showNumberWithAnimation(i, j, number) {
     var numberCell = $('#number_cell_' + i + '_' + j);
-    numberCell.css({ 'background-color': getNumberBackgroundColor(number), 'color': getNumberColor(number), 'font-size': getNumberFontSize(number) });
+    var numberCellCSS = {
+        'background-color': getNumberBackgroundColor(number),
+        'color': getNumberColor(number),
+        'font-size': getNumberFontSize(number)
+    }
+    numberCell.css(numberCellCSS);
     numberCell.text(number);
     numberCell.animate({
-        width: "100px",
-        height: "100px",
+        width: cellSideLength,
+        height: cellSideLength,
         top: getPosition(i),
         left: getPosition(j)
     }, 50);

@@ -1,13 +1,9 @@
-* {
-    margin: 0;
-}
-
 #grid_container {
     position: relative;
     width: 460px;
     height: 460px;
     padding: 20px;
-    margin: 20px auto;
+    margin: 0px auto;
     background-color: #bbada0;
     border-radius: 10px;
 }
@@ -15,7 +11,7 @@
 header {
     display: block;
     margin: 0 auto;
-    width: 500px;
+    width: 100%;
     text-align: center;
 }
 
@@ -27,7 +23,7 @@ header h1 {
 
 header #newGameButton {
     display: block;
-    margin: 5px auto;
+    margin: 0px auto;
     width: 100px;
     padding: 10px;
     background-color: #bb8d61;
@@ -43,7 +39,7 @@ header #newGameButton:hover {
 }
 
 header p {
-    font-size: 30px;
+    font-size: 25px;
     margin: 5px auto;
     font-family: -webkit-pictograph;
 }
@@ -67,4 +63,5 @@ header span {
     font-weight: bold;
     line-height: 100px;
     text-align: center;
+    font-size: 60px;
 }
