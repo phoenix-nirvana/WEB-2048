@@ -14,4 +14,4 @@ web version for a popular game named "2048"
 
 
 ## 新增改动
-**支持手机端滑动操作
+**支持手机端滑动操作**
