@@ -3,6 +3,7 @@
  * 在这个显示过程中 设置了一个50毫秒的动画效果
  */
 function showNumberWithAnimation(i, j, number) {
+<<<<<<< HEAD
   var numberCell = $('#number_cell_' + i + '_' + j);
   var numberCellCSS = {
     'background-color': getNumberBackgroundColor(number),
@@ -18,6 +19,23 @@ function showNumberWithAnimation(i, j, number) {
     left: getPosition(j)
   }, 50);
   //console.log("showNumberWithAnimation running...");
+=======
+    var numberCell = $('#number_cell_' + i + '_' + j);
+    var numberCellCSS = {
+        'background-color': getNumberBackgroundColor(number),
+        'color': getNumberColor(number),
+        'font-size': getNumberFontSize(number)
+    }
+    numberCell.css(numberCellCSS);
+    numberCell.text(number);
+    numberCell.animate({
+        width: cellSideLength,
+        height: cellSideLength,
+        top: getPosition(i),
+        left: getPosition(j)
+    }, 50);
+    //console.log("showNumberWithAnimation running...");
+>>>>>>> e5034614d5abbe0bb75fca91790f01ba2d70018a
 }
 
 /* 移动数字的动画：

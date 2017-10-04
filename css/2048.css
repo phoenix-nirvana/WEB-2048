@@ -1,4 +1,5 @@
 #grid_container {
+<<<<<<< HEAD
   position: relative;
   width: 460px;
   height: 460px;
@@ -13,6 +14,22 @@ header {
   margin: 0 auto;
   width: 100%;
   text-align: center;
+=======
+    position: relative;
+    width: 460px;
+    height: 460px;
+    padding: 20px;
+    margin: 0px auto;
+    background-color: #bbada0;
+    border-radius: 10px;
+}
+
+header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+>>>>>>> e5034614d5abbe0bb75fca91790f01ba2d70018a
 }
 
 header h1 {
@@ -22,6 +39,7 @@ header h1 {
 }
 
 header #newGameButton {
+<<<<<<< HEAD
   display: block;
   margin: 0 auto;
   width: 100px;
@@ -32,6 +50,18 @@ header #newGameButton {
   border-radius: 10px;
   text-decoration: none;
   font-size: 20px;
+=======
+    display: block;
+    margin: 0px auto;
+    width: 100px;
+    padding: 10px;
+    background-color: #bb8d61;
+    font-family: fantasy;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+>>>>>>> e5034614d5abbe0bb75fca91790f01ba2d70018a
 }
 
 header #newGameButton:hover {
@@ -39,9 +69,15 @@ header #newGameButton:hover {
 }
 
 header p {
+<<<<<<< HEAD
   font-size: 25px;
   margin: 5px auto;
   font-family: -webkit-pictograph;
+=======
+    font-size: 25px;
+    margin: 5px auto;
+    font-family: -webkit-pictograph;
+>>>>>>> e5034614d5abbe0bb75fca91790f01ba2d70018a
 }
 
 header span {
@@ -57,6 +93,7 @@ header span {
 }
 
 .number_cell {
+<<<<<<< HEAD
   position: absolute;
   border-radius: 6px;
   font-family: Arial;
@@ -65,3 +102,13 @@ header span {
   text-align: center;
   font-size: 60px;
 }
+=======
+    position: absolute;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    line-height: 100px;
+    text-align: center;
+    font-size: 60px;
+}
+>>>>>>> e5034614d5abbe0bb75fca91790f01ba2d70018a
